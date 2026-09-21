@@ -1,0 +1,90 @@
+:root {
+  --font-family: "Inter", sans-serif;
+
+  --text-primary: #403f3d;
+  --text-inverse: #e1d4c9;
+  --text-accent: #b0907a;
+  --background-page: #e1d4c9;
+  --background-container: #665f55;
+  --background-overlay: rgba(64, 63, 61, 0.8);
+  --border-primary: #c1b6ad;
+  --border-inverse: #665f55;
+  --background-modal: #e1d4c9;
+  --background-modalcontrol: #665f55;
+
+  --dark-text-primary: #e1d4c9;
+  --dark-text-inverse: #e1d4c9;
+  --dark-text-accent: #b0907a;
+  --dark-bg-page: #292826;
+  --dark-bg-container: #403f3d;
+  --dark-bg-overlay: rgba(41, 40, 38, 0.8);
+  --dark-border-primary: #665f55;
+  --dark-border-inverse: #c1b6ad;
+  --dark-bg-modal: var(--dark-bg-container);
+  --dark-bg-modal-control: var(--dark-bg-page);
+
+  --current-text-primary: var(--text-primary);
+  --current-text-inverse: var(--text-inverse);
+  --current-text-accent: var(--text-accent);
+  --current-background-page: var(--background-page);
+  --current-background-container: var(--background-container);
+  --current-background-overlay: var(--background-overlay);
+  --current-border-primary: var(--border-primary);
+  --current-border-inverse: var(--border-inverse);
+  --current-background-modal: var(--background-modal);
+  --current-background-modalcontrol: var(--background-modalcontrol);
+
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+
+  &.dark-theme {
+    --current-text-primary: var(--dark-text-primary);
+    --current-text-inverse: var(--dark-text-inverse);
+    --current-text-accent: var(--dark-text-accent);
+    --current-background-page: var(--dark-bg-page);
+    --current-background-container: var(--dark-bg-container);
+    --current-background-overlay: var(--dark-bg-overlay);
+    --current-border-primary: var(--dark-border-primary);
+    --current-border-inverse: var(--dark-border-inverse);
+    --current-background-modal: var(--dark-bg-modal);
+    --current-background-modalcontrol: var(--dark-bg-modal-control);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-optical-sizing: auto;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.6rem;
+  background: var(--current-background-page);
+  color: var(--text-primary);
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.6rem;
+}
+
+.sorry-message {
+  max-width: 640px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
